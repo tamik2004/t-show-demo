@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<title>T-SHOW — аренда звука, света и сцены в Саранске</title>
-<meta name="description" content="Аренда профессионального звукового, светового и сценического оборудования в Саранске. Доставка, монтаж и техник на площадке. Смета за час — звоните 8 917 004-26-28.">
+<title>T-SHOW — звук, свет, сцены и спецэффекты для мероприятий в Саранске</title>
+<meta name="description" content="Техническое обеспечение мероприятий в Саранске и Мордовии: звук и линейные массивы, световые шоу, светодиодные экраны, сцены и подиумы, спецэффекты. Монтаж и техник на площадке — 8 917 004-26-28.">
 <meta name="theme-color" content="#121212">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" as="image" href="assets/stage.webp">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:title" content="T-SHOW — аренда звука, света и сцены в Саранске">
-<meta property="og:description" content="Звук, свет, сцена, видео и спецэффекты в аренду. Доставка, монтаж и техник на площадке.">
+<meta property="og:title" content="T-SHOW — звук, свет, сцены и спецэффекты для мероприятий">
+<meta property="og:description" content="Звук, световые шоу, LED-экраны, сцены и спецэффекты для событий любого масштаба. Монтаж и техник на площадке.">
 <meta property="og:image" content="https://tamik2004.github.io/t-show-demo/assets/og.jpg">
 <meta property="og:url" content="https://tamik2004.github.io/t-show-demo/">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"T-SHOW","description":"Аренда звукового, светового и сценического оборудования","telephone":"+79170042628","image":"https://tamik2004.github.io/t-show-demo/assets/og.jpg","url":"https://tamik2004.github.io/t-show-demo/","address":{"@type":"PostalAddress","addressLocality":"Саранск","addressCountry":"RU"},"areaServed":"Саранск","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"T-SHOW","description":"Техническое обеспечение мероприятий: звук, свет, сцены, LED-экраны, спецэффекты","telephone":"+79170042628","image":"https://tamik2004.github.io/t-show-demo/assets/og.jpg","url":"https://tamik2004.github.io/t-show-demo/","address":{"@type":"PostalAddress","addressLocality":"Саранск","addressCountry":"RU"},"areaServed":"Саранск","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"}}</script>
 <style>
 :root{--bg:#121212;--panel:#1d1d1d;--panel2:#242424;--line:#333;--text:#f2f2f2;--muted:#9a9a9a;--accent:#e8702a;--font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -493,6 +493,73 @@ main{overflow-x:clip}
 .demo-tag{position:fixed;left:16px;bottom:16px;z-index:60;background:#111;border:1px dashed var(--accent);color:var(--accent);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;pointer-events:none}
 @media(max-width:860px){.demo-tag{bottom:auto;top:72px;left:auto;right:10px}}
 @media(prefers-reduced-motion:reduce){.spot{display:none}}
+
+/* ===== v3: направления вместо каталога ===== */
+.dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dir{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .3s,box-shadow .3s}
+.dir.flash{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 20px 50px -20px rgba(232,112,42,.6)}
+.dir-ph{position:relative;height:230px;display:grid;place-items:center;background:radial-gradient(circle at 50% 55%,rgba(232,112,42,.2),transparent 65%),var(--panel2);border-bottom:1px solid var(--line);overflow:hidden}
+.dir-ph img{max-width:78%;max-height:190px;object-fit:contain;filter:drop-shadow(0 14px 16px rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(232,112,42,.2));transition:transform .5s}
+.dir:hover .dir-ph img{transform:scale(1.05)}
+.dir-n{position:absolute;left:16px;top:12px;color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.14em}
+.dico{display:grid;place-items:center;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(232,112,42,.18),transparent 70%)}
+.dico svg{width:110px;height:110px}
+.dir-b{padding:24px 24px 24px;display:flex;flex-direction:column;flex:1}
+.dir-b h3{font-size:22px;margin-bottom:10px}
+.dir-b>p{color:#cfcfcf;font-size:15px;margin-bottom:18px}
+.dir-cols{display:grid;grid-template-columns:1fr;gap:14px;flex:1;margin-bottom:20px}
+.dir-cols b{display:block;color:var(--accent);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.dir-cols ul{list-style:none}
+.dir-cols li{color:var(--muted);font-size:14px;padding:4px 0 4px 14px;position:relative;line-height:1.4}
+.dir-cols li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:1px;background:var(--accent)}
+.dadd{align-self:flex-start;border:1px solid var(--line);background:transparent;padding:11px 16px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:.15s}
+.dadd:hover{border-color:var(--accent)}
+.dadd.on{background:var(--accent);border-color:var(--accent);color:#111}
+
+/* иконки как картинки */
+.pc .art.icn svg,.dico svg,.rlist .im svg{stroke:#e9e9e9;stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 6px 10px rgba(0,0,0,.6))}
+.pc .art.icn svg *,.dico svg *,.rlist .im svg *{fill:none}
+.pc .art.icn svg .a,.dico svg .a,.rlist .im svg .a{stroke:var(--accent)}
+.pc .art.icn svg .f,.dico svg .f,.rlist .im svg .f{fill:var(--accent);stroke:none}
+.pc .art.icn svg .bf,.dico svg .bf,.rlist .im svg .bf{fill:rgba(255,255,255,.04);stroke:none}
+.pc .art.icn svg .g,.dico svg .g,.rlist .im svg .g{stroke:rgba(255,255,255,.22);stroke-width:.8}
+.pc .art.icn svg .beam,.dico svg .beam,.rlist .im svg .beam{fill:rgba(232,112,42,.2);stroke:none}
+
+/* масштаб */
+.scale{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sc{border:1px solid var(--line);padding:32px 28px;position:relative;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
+.sc.hot{border-color:rgba(232,112,42,.6);background:linear-gradient(180deg,rgba(232,112,42,.1),transparent 70%)}
+.sc-n{display:block;color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.14em;margin-bottom:34px}
+.sc h3{font-size:22px;margin-bottom:6px}
+.sc-g{color:var(--accent);font-size:14px;font-weight:600;margin-bottom:14px}
+.sc p{color:var(--muted);font-size:15px}
+
+/* подбор: список решений */
+.rlist li{grid-template-columns:48px 1fr;align-items:start}
+.rlist .im{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle,rgba(232,112,42,.18),transparent 70%)}
+.rlist .im svg{width:36px;height:36px}
+.rlist li b{display:block;color:var(--text);font-weight:600;font-size:14px;margin-bottom:2px}
+.rlist li>span:last-child{color:var(--muted);font-size:14px;line-height:1.45}
+.tgl span:first-child{font-size:14px}
+
+/* выбор направлений в форме */
+.fdirs{margin-bottom:6px}
+.fdirs .fl{color:var(--muted);font-size:13px;letter-spacing:.08em;margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #555;background:transparent;padding:9px 14px;font-size:13px;cursor:pointer;color:var(--muted);transition:.15s}
+.chip:hover{color:var(--text);border-color:#888}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#111;font-weight:600}
+.bsum{border:1px dashed #555;padding:14px 16px;margin-top:16px;font-size:14px}
+.bsum b{color:var(--accent);font-size:12px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:6px}
+.bsum p{color:var(--text);margin-bottom:4px}
+.bsum ul{list-style:none;color:var(--muted)}
+.bsum li{padding:2px 0}
+.bsum button{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:13px;margin-top:6px}
+.tiles .tile span:last-child{min-height:2.7em;display:flex;align-items:center}
+
+@media(max-width:1060px){.dirs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.dirs{grid-template-columns:1fr}.dir-ph{height:210px}}
+@media(max-width:860px){.scale{grid-template-columns:1fr}.dir-cols{gap:12px}.dir-b{padding:20px}.dir-b h3{font-size:21px}}
 </style>
 </head>
 <body><script>document.documentElement.className="js"</script><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d3d44"/><stop offset=".45" stop-color="#232327"/><stop offset="1" stop-color="#111113"/></linearGradient><radialGradient id="gR" cx=".38" cy=".34" r=".8"><stop offset="0" stop-color="#6b7283"/><stop offset=".35" stop-color="#2a2c33"/><stop offset="1" stop-color="#101012"/></radialGradient></defs></svg>
@@ -501,13 +568,13 @@ main{overflow-x:clip}
  <div class="wrap bar">
   <a href="#top" class="logo" aria-label="T-SHOW — на главную"><img alt="T-SHOW" src="assets/logo.webp" width="178" height="30"></a>
   <nav aria-label="Основное меню">
-   <a href="#catalog">Оборудование</a><a href="#builder">Конструктор</a><a href="#packs">Комплекты</a><a href="#services">Услуги</a><a href="#contacts">Контакты</a>
+   <a href="#dirs">Направления</a><a href="#builder">Подбор</a><a href="#scale">Масштаб</a><a href="#order">Как работаем</a><a href="#contacts">Контакты</a>
   </nav>
   <div class="hdr-act">
    <a class="phone" href="tel:+79170042628">8 917 004-26-28</a>
    <a class="icon-btn" href="tel:+79170042628" aria-label="Позвонить"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></a>
   </div>
-  <button class="btn smeta-h" type="button" data-open-cart>Смета <i id="hdrCount"></i></button>
+  <a class="btn smeta-h" href="#contacts">Заявка <i id="hdrCount"></i></a>
  </div>
 </header>
 
@@ -516,16 +583,16 @@ main{overflow-x:clip}
   <div class="wrap"><div class="center">
    <div class="eqp" id="eqp" aria-hidden="true"></div>
    <div class="big-wm"><img alt="T-SHOW" src="assets/wordmark.webp" width="680" height="114"></div>
-   <div class="tagl"><i></i><h1>АРЕНДА ПРОФЕССИОНАЛЬНОГО ЗВУКА, СВЕТА И СЦЕНЫ В САРАНСКЕ</h1><i></i></div>
+   <div class="tagl"><i></i><h1>ЗВУК, СВЕТ, СЦЕНА И СПЕЦЭФФЕКТЫ ДЛЯ СОБЫТИЙ ЛЮБОГО МАСШТАБА</h1><i></i></div>
    <div class="tiles" id="tiles"></div>
-   <div class="cta"><a class="btn fill" href="#contacts">Рассчитать стоимость →</a><a class="btn" href="#catalog">Смотреть каталог</a></div>
+   <div class="cta"><a class="btn fill" href="#builder">Подобрать под событие →</a><a class="btn" href="#dirs">Что мы делаем</a></div>
    <div class="facts" id="facts"></div>
   </div></div></div>
  <div class="eq" id="eq" aria-hidden="true"></div>
 
  <section id="park">
   <div class="wrap">
-   <div class="sec-head"><div><span class="tag">// ПАРК ОБОРУДОВАНИЯ //</span><h2 class="rv">Профессиональные мощности для любых мероприятий</h2></div><a class="btn" href="#catalog">Весь каталог →</a></div>
+   <div class="sec-head"><div><span class="tag">// НАПРАВЛЕНИЯ //</span><h2 class="rv">Всё техническое обеспечение события — в одних руках</h2></div><a class="btn" href="#dirs">Подробнее →</a></div>
    <div class="park rv">
     <div class="pcol" id="pl"></div>
     <div class="pc" id="pc" aria-hidden="true">
@@ -539,77 +606,63 @@ main{overflow-x:clip}
   </div>
  </section>
 
- <section id="packs" class="alt">
+ <section id="dirs" class="alt">
   <div class="wrap">
-   <div class="sec-head"><div><span class="tag">// ГОТОВЫЕ КОМПЛЕКТЫ //</span><h2>Подобрали под ваше событие</h2></div><p class="lead" style="margin:0;max-width:30em">Состав и ориентир по цене. Добавьте комплект в смету и поменяйте под себя: точную стоимость назовём после уточнения площадки.</p></div>
-   <div class="packs" id="packList"></div>
+   <div class="sec-head"><div><span class="tag">// ЧТО МЫ ДЕЛАЕМ //</span><h2>Шесть направлений — одно событие</h2></div><p class="lead" style="margin:0;max-width:30em">Без сложных названий и моделей: расскажите, какое у вас событие, — технику подберём сами. Отметьте, что нужно, и это попадёт в заявку.</p></div>
+   <div class="dirs" id="dirList"></div>
   </div>
  </section>
 
  <section id="builder">
   <div class="wrap">
-   <div class="sec-head"><div><span class="tag">// КОНСТРУКТОР СОБЫТИЯ //</span><h2>Соберите комплект за минуту</h2></div><p class="lead" style="margin:0;max-width:30em">Выберите формат, число гостей и что нужно — подберём технику и покажем ориентир по цене. Одной кнопкой всё уйдёт в смету.</p></div>
+   <div class="sec-head"><div><span class="tag">// ПОДБОР ПОД СОБЫТИЕ //</span><h2>Что нужно именно вам</h2></div><p class="lead" style="margin:0;max-width:30em">Выберите формат и число гостей — покажем, что обычно нужно для такого события. Отправьте в заявку, и менеджер посчитает точную стоимость.</p></div>
    <div class="bld">
-    <div class="bq glow">
+    <div class="bq">
      <div class="q"><h3>Формат события</h3><div class="opts" id="bFmt"></div></div>
-     <div class="q"><h3>Гостей <b id="bGv">80</b></h3><input class="rng" type="range" id="bGs" min="20" max="300" step="10" value="80" aria-label="Число гостей"><div class="rl"><span>20</span><span>150</span><span>300+</span></div></div>
+     <div class="q"><h3>Гостей <b id="bGv">100</b></h3><input class="rng" type="range" id="bGs" min="0" max="14" step="1" value="4" aria-label="Число гостей"><div class="rl"><span>20</span><span>500</span><span>5000+</span></div></div>
      <div class="q"><h3>Что нужно</h3><div class="tgs" id="bNeed"></div></div>
     </div>
-    <div class="res glow">
-     <h3>Ваш комплект</h3><div class="sub" id="bSub"></div>
+    <div class="res">
+     <h3>Ваше решение</h3><div class="sub" id="bSub"></div>
      <ul class="rlist" id="bList"></ul>
-     <div class="rtot"><span>Ориентир за сутки</span><b id="bTot"></b></div>
-     <p class="h">Без доставки, монтажа и работы техника. Точную цену назовём в смете.</p>
-     <button class="btn fill" type="button" id="bAdd">Добавить комплект в смету →</button>
+     <p class="h">Точный состав и стоимость менеджер подберёт под вашу площадку и сценарий.</p>
+     <button class="btn fill" type="button" id="bAdd">Отправить в заявку →</button>
     </div>
    </div>
   </div>
  </section>
 
- <section id="catalog">
+ <section id="scale" class="alt">
   <div class="wrap">
-   <div class="sec-head"><div><span class="tag">// КАТАЛОГ //</span><h2>Оборудование в аренду</h2></div></div>
-   <div class="cat"><aside class="side" id="side" aria-label="Разделы каталога"></aside>
-    <div>
-     <div class="cat-tools"><label class="search"><span class="sr">Поиск по каталогу</span><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="Поиск: микрофон, прожектор, дым…" autocomplete="off"></label></div>
-     <div id="list"></div>
-    </div>
+   <div class="sec-head"><div><span class="tag">// ЛЮБОЙ МАСШТАБ //</span><h2>От банкета до городского праздника</h2></div></div>
+   <div class="scale">
+    <div class="sc"><span class="sc-n">01</span><h3>Камерные события</h3><div class="sc-g">до 100 гостей</div><p>Свадьбы, юбилеи, банкеты, конференции и презентации. Чистый звук, уютный свет и эффектные моменты.</p></div>
+    <div class="sc"><span class="sc-n">02</span><h3>Крупные мероприятия</h3><div class="sc-g">100–500 гостей</div><p>Корпоративы, выпускные, концерты в залах. Мощный звук, световое шоу, сцена и экраны.</p></div>
+    <div class="sc hot"><span class="sc-n">03</span><h3>Масштабные проекты</h3><div class="sc-g">от 500 гостей</div><p>Городские праздники, фестивали и концерты под открытым небом. Линейные массивы, большие LED-экраны, концертные сцены.</p></div>
    </div>
   </div>
  </section>
 
- <section id="why" class="alt">
+ <section id="why">
   <div class="wrap">
    <div class="sec-head"><div><span class="tag">// ПОЧЕМУ T-SHOW //</span><h2>Работаем так, чтобы вы думали о празднике</h2></div></div>
    <div class="why">
-    <div><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><h3>Проверено перед выдачей</h3><p>Каждый прибор тестируем на складе. Кабели и крепёж входят в аренду.</p></div>
-    <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Смета за час</h3><p>Подбираем комплект под площадку и называем цену до подтверждения.</p></div>
-    <div><svg viewBox="0 0 24 24"><path d="M3 17h2l2-9h10l2 9h2"/><circle cx="8" cy="18" r="2"/><circle cx="16" cy="18" r="2"/><path d="M9 8V5h6v3"/></svg><h3>Под ключ</h3><p>Доставка, монтаж, настройка и демонтаж — наша команда.</p></div>
-    <div><svg viewBox="0 0 24 24"><path d="M4 18v-3a8 8 0 0 1 16 0v3"/><rect x="2" y="15" width="4" height="6" rx="1"/><rect x="18" y="15" width="4" height="6" rx="1"/></svg><h3>Техник на площадке</h3><p>Звукорежиссёр ведёт звук и свет весь вечер и решает вопросы на месте.</p></div>
-   </div>
-  </div>
- </section>
-
- <section id="services">
-  <div class="wrap">
-   <div class="sec-head"><div><span class="tag">// УСЛУГИ //</span><h2>Что мы делаем помимо аренды</h2></div></div>
-   <div class="services">
-    <div class="svc"><span class="n">01</span><h3>Доставка и монтаж</h3><p>Привозим технику, собираем систему, подключаем и проверяем до начала мероприятия.</p></div>
-    <div class="svc"><span class="n">02</span><h3>Звукорежиссёр на площадке</h3><p>Техник остаётся на мероприятии, ведёт звук и свет и решает вопросы на месте.</p></div>
-    <div class="svc"><span class="n">03</span><h3>Подбор под площадку</h3><p>Скажите, сколько гостей и где проходит событие. Мы предложим комплект без лишних затрат.</p></div>
-    <div class="svc"><span class="n">04</span><h3>Комплекты под ключ</h3><p>Свадьба, корпоратив, концерт, выставка. Звук, свет и сцена в одном расчёте.</p></div>
+    <div><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><h3>Всё под ключ</h3><p>Один подрядчик на звук, свет, сцену, экраны и эффекты — без поиска и согласований с разными людьми.</p></div>
+    <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Расчёт за час</h3><p>Подбираем решение под площадку и бюджет и называем цену до подтверждения.</p></div>
+    <div><svg viewBox="0 0 24 24"><path d="M3 17h2l2-9h10l2 9h2"/><circle cx="8" cy="18" r="2"/><circle cx="16" cy="18" r="2"/><path d="M9 8V5h6v3"/></svg><h3>Монтаж и демонтаж</h3><p>Привозим, собираем и проверяем заранее, после события всё увозим сами.</p></div>
+    <div><svg viewBox="0 0 24 24"><path d="M4 18v-3a8 8 0 0 1 16 0v3"/><rect x="2" y="15" width="4" height="6" rx="1"/><rect x="18" y="15" width="4" height="6" rx="1"/></svg><h3>Техник на площадке</h3><p>Звукорежиссёр и художник по свету ведут событие от начала до конца.</p></div>
    </div>
   </div>
  </section>
 
  <section id="order" class="alt">
   <div class="wrap">
-   <div class="sec-head"><div><span class="tag">// КАК ЗАКАЗАТЬ //</span><h2>Четыре шага до готовой площадки</h2></div></div>
+   <div class="sec-head"><div><span class="tag">// КАК МЫ РАБОТАЕМ //</span><h2>Четыре шага до готовой площадки</h2></div></div>
    <div class="steps">
-    <div class="step"><h3><span>01</span> Заявка</h3><p>Соберите смету на сайте, оставьте телефон или напишите в мессенджер: дату, место и формат события.</p></div>
-    <div class="step"><h3><span>02</span> Смета</h3><p>Подбираем комплект и называем точную цену до подтверждения.</p></div>
-    <div class="step"><h3><span>03</span> Монтаж</h3><p>Привозим и устанавливаем оборудование в согласованное время.</p></div>
-    <div class="step"><h3><span>04</span> Демонтаж</h3><p>После мероприятия сами забираем всё и закрываем аренду.</p></div>
+    <div class="step"><h3><span>01</span> Заявка</h3><p>Расскажите о событии: дата, место, число гостей и формат. Можно через подбор на сайте или по телефону.</p></div>
+    <div class="step"><h3><span>02</span> Решение и цена</h3><p>Подбираем технику под площадку и сценарий, называем точную стоимость до подтверждения.</p></div>
+    <div class="step"><h3><span>03</span> Монтаж</h3><p>Привозим, устанавливаем и проверяем всё заранее, до прихода гостей.</p></div>
+    <div class="step"><h3><span>04</span> Событие и демонтаж</h3><p>Ведём звук и свет на мероприятии, после — сами всё забираем.</p></div>
    </div>
   </div>
  </section>
@@ -618,10 +671,11 @@ main{overflow-x:clip}
   <div class="wrap contact">
    <div>
     <span class="tag">// ЗАЯВКА НА РАСЧЁТ //</span>
-    <h2>Давайте <span>посчитаем</span></h2>
-    <p class="lead">Оставьте контакты — заявка сразу придёт менеджеру, мы перезвоним и подготовим точный расчёт.</p>
+    <h2>Давайте <span>обсудим</span></h2>
+    <p class="lead">Оставьте контакты — заявка сразу придёт менеджеру, мы перезвоним и предложим решение под ваше событие.</p>
     <form id="form" novalidate>
-     <div class="picked" id="picked"><b>Ваша смета</b><ul id="pickedList"></ul><button type="button" data-open-cart>Изменить состав</button></div>
+     <div class="fdirs"><div class="fl">ЧТО НУЖНО</div><div class="chips" id="fDirs"></div></div>
+     <div class="bsum" id="bSum" hidden></div>
      <label for="name">ИМЯ</label>
      <input id="name" type="text" placeholder="Иван Петров" autocomplete="name">
      <label for="tel">ТЕЛЕФОН</label>
@@ -629,7 +683,7 @@ main{overflow-x:clip}
      <label for="date">ДАТА МЕРОПРИЯТИЯ</label>
      <input id="date" type="date">
      <label for="msg">ПЛОЩАДКА, ЧИСЛО ГОСТЕЙ, ПОЖЕЛАНИЯ</label>
-     <textarea id="msg" placeholder="Например: банкетный зал, 80 гостей, нужен ведущий микрофон и танцпол"></textarea>
+     <textarea id="msg" placeholder="Например: банкетный зал, 80 гостей, нужен свет на первый танец"></textarea>
      <label class="agree"><input id="ok" type="checkbox"><span>Согласен на обработку персональных данных в соответствии с <a href="privacy.html" target="_blank">политикой конфиденциальности</a></span></label>
      <input type="text" name="_honey" id="honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
      <button class="btn fill" type="submit" id="sendBtn">Отправить заявку</button>
@@ -650,105 +704,27 @@ main{overflow-x:clip}
   </div>
  </section>
 </main>
-<div id="detail" hidden></div>
 
 <footer>
  <div class="wrap">
   <div class="ft">
-   <div><img alt="T-SHOW" src="assets/logo.webp" width="166" height="28" loading="lazy"><p>Аренда профессионального звука, света, сцены и спецэффектов в Саранске. Доставка, монтаж, техник на площадке.</p></div>
-   <div><h4>Разделы</h4><a href="#catalog">Оборудование</a><a href="#packs">Комплекты</a><a href="#services">Услуги</a><a href="#order">Как заказать</a></div>
+   <div><img alt="T-SHOW" src="assets/logo.webp" width="166" height="28" loading="lazy"><p>Звук, свет, сцены, светодиодные экраны и спецэффекты для событий любого масштаба в Саранске и Мордовии. Монтаж и техник на площадке.</p></div>
+   <div><h4>Разделы</h4><a href="#dirs">Направления</a><a href="#builder">Подбор под событие</a><a href="#scale">Масштаб</a><a href="#order">Как работаем</a></div>
    <div><h4>Контакты</h4><a href="tel:+79170042628">8 917 004-26-28</a><a href="https://wa.me/79170042628" target="_blank" rel="noopener">WhatsApp</a><span>Ежедневно 9:00–21:00</span></div>
   </div>
  </div>
- <div class="wrap cp"><span>© 2026 T-SHOW. Аренда звука и света.</span><a href="privacy.html">Политика конфиденциальности</a></div>
+ <div class="wrap cp"><span>© 2026 T-SHOW. Техническое обеспечение мероприятий.</span><a href="privacy.html">Политика конфиденциальности</a></div>
 </footer>
 
-<button id="cartBtn" type="button" data-open-cart><svg viewBox="0 0 24 24"><path d="M9 5h6M5 8h14l-1.5 12h-11z"/><path d="M9 12h6M9 16h4"/></svg><span>Смета</span><span class="c" id="cartCount">0</span><span id="cartSum"></span></button>
-<div id="drawer" role="dialog" aria-modal="true" aria-labelledby="dh"><div class="ov" data-close></div><div class="pn">
- <div class="pn-h"><h2 id="dh">Ваша смета</h2><button class="x" type="button" data-close aria-label="Закрыть">×</button></div>
- <div class="pn-list" id="cartList"></div>
- <div class="pn-f"><div class="tot"><span>Ориентир</span><b id="cartTotal">0 ₽</b></div><p id="cartNote">Цена за сутки по базовым тарифам. Доставка, монтаж и техник считаются отдельно.</p><a class="btn fill" href="#contacts" data-close>Оформить заявку</a><button class="clr" type="button" id="cartClear">Очистить смету</button></div>
-</div></div>
-
 <nav class="mbar" aria-label="Быстрые действия">
- <a href="#catalog"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Каталог</a>
- <button type="button" data-open-cart><svg viewBox="0 0 24 24"><path d="M9 5h6M5 8h14l-1.5 12h-11z"/><path d="M9 12h6M9 16h4"/></svg>Смета<i id="mCount"></i></button>
+ <a href="#dirs"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Направления</a>
+ <a href="#contacts"><svg viewBox="0 0 24 24"><path d="M9 5h6M5 8h14l-1.5 12h-11z"/><path d="M9 12h6M9 16h4"/></svg>Заявка<i id="mCount"></i></a>
  <a class="call" href="tel:+79170042628"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Позвонить</a>
 </nav>
 
 <script>
 var WA="79170042628"; /* номер WhatsApp без плюса */
 var TEL="+79170042628";
-var icons={
- "Звук":'<svg viewBox="0 0 120 120"><path d="M28 8h64"/><path d="M34 14h52l4 22H30z"/><path d="M31 40h58l4 22H27z" transform="rotate(2 60 51)"/><path d="M30 66h60l4 22H26z" transform="rotate(4 60 77)"/><path d="M30 92h60l5 20H25z" transform="rotate(7 60 102)"/><circle cx="47" cy="25" r="6"/><circle cx="73" cy="25" r="6"/><circle cx="46" cy="51" r="6"/><circle cx="74" cy="51" r="6"/><circle cx="45" cy="77" r="6"/><circle cx="75" cy="77" r="6"/><circle cx="44" cy="102" r="6"/><circle cx="76" cy="102" r="6"/></svg>',
- "Свет":'<svg viewBox="0 0 120 120"><path d="M20 92l40-20 40 20-40 20z"/><path d="M20 92v8l40 20v-8M100 92v8l-40 20"/><path d="M46 70V46q0-12 14-12t14 12v24"/><circle cx="60" cy="30" r="14"/><circle cx="60" cy="30" r="7"/><path d="M52 18L38 4M68 18L82 4" opacity=".6"/></svg>',
- "Сцена":'<svg viewBox="0 0 120 120"><path d="M12 24h96M12 48h96M12 24v24M108 24v24"/><path d="M12 24l12 24 12-24 12 24 12-24 12 24 12-24 12 24 12-24" /><path d="M12 48v46M108 48v46"/><path d="M6 94l54 20 54-20-54-20z"/></svg>',
- "Видео":'<svg viewBox="0 0 120 120"><rect x="12" y="18" width="96" height="58" rx="2"/><path d="M36 18v58M60 18v58M84 18v58M12 37h96M12 56h96" opacity=".45"/><path d="M38 76l-8 30M82 76l8 30M20 106h80"/></svg>',
- "Спецэффекты":'<svg viewBox="0 0 120 120"><rect x="14" y="74" width="56" height="26" rx="3"/><path d="M70 82h10M22 74v-6h14v6"/><circle cx="86" cy="62" r="9"/><circle cx="98" cy="44" r="12"/><circle cx="82" cy="34" r="8"/><circle cx="102" cy="20" r="6"/><path d="M22 110h40" opacity=".5"/></svg>',
- "Энергия":'<svg viewBox="0 0 120 120"><rect x="14" y="48" width="92" height="56" rx="4"/><path d="M64 56L48 80h12l-4 18 22-28H66l4-14z"/><circle cx="30" cy="34" r="10"/><circle cx="30" cy="34" r="5"/><path d="M40 34h30l10 14"/></svg>'
-};
-/* [раздел, подраздел, название, описание, цена, [[характеристика, значение], ...]] — цены и характеристики примерные */
-var S=function(b){return '<svg viewBox="0 0 120 120">'+b+'</svg>'};
-function mh(spot){var d="";if(spot){d='<circle cx="60" cy="30" r="13"/><circle cx="60" cy="30" r="7"/><path class="ac" d="M52 14L38 2M68 14L82 2"/>'}else{d='<circle cx="60" cy="30" r="16"/><circle cx="60" cy="30" r="10"/>';[[66.5,30],[63.2,35.6],[56.8,35.6],[53.5,30],[56.8,24.4],[63.2,24.4]].forEach(function(q){d+='<circle class="ac" cx="'+q[0]+'" cy="'+q[1]+'" r="1.6"/>'})}
- return S('<path d="M26 98l34-14 34 14-34 14z"/><path d="M26 98v8l34 14v-8z"/><path d="M94 98v8l-34 14v-8z"/><path d="M32 92V46h12v46z"/><path d="M76 92V46h12v46z"/><rect x="38" y="12" width="44" height="50" rx="15"/>'+d)}
-var mixB='<rect x="8" y="30" width="104" height="66" rx="4"/>',strB='<rect x="8" y="34" width="104" height="52" rx="4"/>',i;
-for(i=0;i<6;i++){mixB+='<circle cx="'+(24+i*15)+'" cy="42" r="3"/><path d="M'+(24+i*15)+' 56V88"/><rect class="ac" x="'+(20+i*15)+'" y="'+(60+(i*9)%20)+'" width="8" height="5"/>'}
-for(i=0;i<5;i++){strB+='<rect x="'+(16+i*19)+'" y="42" width="15" height="15"/><rect class="'+(i%2?'ac':'')+'" x="'+(16+i*19)+'" y="62" width="15" height="15"/>'}
-var pads='<rect x="8" y="30" width="104" height="66" rx="4"/>';
-for(i=0;i<4;i++){pads+='<rect class="'+(i==1?'ac':'')+'" x="'+(16+i*16)+'" y="38" width="12" height="12"/><rect class="'+(i==2?'ac':'')+'" x="'+(16+i*16)+'" y="54" width="12" height="12"/>'}
-pads+='<path d="M88 40V88M102 40V88"/><rect class="ac" x="84" y="56" width="8" height="5"/><rect class="ac" x="98" y="70" width="8" height="5"/><circle cx="36" cy="82" r="9"/><circle class="ac" cx="36" cy="82" r="2"/>';
-var sock='<rect x="16" y="30" width="88" height="60" rx="4"/>';
-[[38,50],[60,50],[82,50],[38,72],[60,72],[82,72]].forEach(function(p,k){sock+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="7"/><circle class="'+(k==1?'ac':'')+'" cx="'+p[0]+'" cy="'+p[1]+'" r="2"/>'});
-sock+='<path d="M16 60H6q-4 0-4 8v10M104 60h10"/>';
-var arts={
- 'Активная акустика 15"':S('<rect x="32" y="10" width="56" height="100" rx="5"/><rect x="43" y="20" width="34" height="16" rx="3"/><path class="ac" d="M47 28h26"/><circle cx="60" cy="74" r="24"/><circle cx="60" cy="74" r="13"/><circle class="ac" cx="60" cy="74" r="4"/><path d="M32 40h-6v16h6M88 40h6v16h-6"/>'),
- 'Сабвуфер 18"':S('<rect x="14" y="26" width="92" height="78" rx="5"/><circle cx="60" cy="65" r="30"/><circle cx="60" cy="65" r="18"/><circle class="ac" cx="60" cy="65" r="6"/><path d="M8 56v18M112 56v18M24 104v6M96 104v6"/>'),
- 'Микшерный пульт 16 каналов':S(mixB),
- 'Радиомикрофон ручной':S('<g transform="rotate(32 60 62)"><circle cx="60" cy="22" r="14"/><path d="M48 18h24M47 24h26M50 30h20" opacity=".6"/><path d="M52 34l4 72q4 8 8 0l4-72"/><path class="ac" d="M54 56h12"/></g>'),
- 'Радиосистема с гарнитурой':S('<path d="M28 62A30 30 0 0 1 88 62"/><ellipse cx="28" cy="68" rx="5" ry="9"/><path d="M28 77q4 20 36 18"/><circle class="ac" cx="67" cy="95" r="3.5"/><rect x="84" y="72" width="26" height="36" rx="3"/><rect class="ac" x="89" y="78" width="16" height="9" rx="1"/><path d="M104 72V50M88 62q14 2 14 10"/>'),
- 'DJ-комплект':S('<rect x="6" y="32" width="108" height="64" rx="4"/><circle cx="32" cy="66" r="21"/><circle cx="32" cy="66" r="6"/><circle class="ac" cx="32" cy="66" r="14" stroke-dasharray="3 4"/><circle cx="88" cy="66" r="21"/><circle cx="88" cy="66" r="6"/><circle class="ac" cx="88" cy="66" r="14" stroke-dasharray="3 4"/><path d="M54 44v44M66 44v44"/><rect class="ac" x="51" y="56" width="6" height="8"/><rect class="ac" x="63" y="68" width="6" height="8"/>'),
- 'LED PAR, комплект 8 шт.':S('<circle cx="60" cy="52" r="32"/><circle cx="60" cy="52" r="22"/><circle class="ac" cx="60" cy="52" r="8"/><circle cx="60" cy="52" r="15" stroke-dasharray="2 5"/><path d="M22 60v28q0 12 12 12h52q12 0 12-12V60M60 84v16M52 106h16"/>'),
- 'Вращающаяся голова Spot':mh(true),'Вращающаяся голова Wash':mh(false),
- 'Стробоскоп':S(strB+'<path d="M44 86v16M76 86v16M30 106h60"/>'),
- 'Генератор дыма':S('<rect x="10" y="66" width="62" height="32" rx="3"/><path d="M72 76h12v14H72M20 66v-7h16v7M20 80h40M20 88h40"/><circle class="ac" cx="92" cy="66" r="7"/><circle cx="102" cy="48" r="11"/><circle cx="84" cy="38" r="8"/><circle cx="104" cy="24" r="6"/>'),
- 'Пульт управления светом':S(pads),
- 'Сценический подиум 2×1 м':S('<path d="M8 56l52-22 52 22-52 22z"/><path d="M8 56v18l52 22V78M112 56v18L60 96"/><path class="ac" d="M34 45l52 22M86 45L34 67"/>'),
- 'Стойки для света и звука':S('<path d="M60 12v84M24 24h72"/><rect x="14" y="12" width="20" height="20" rx="3"/><circle class="ac" cx="24" cy="22" r="5"/><rect x="86" y="12" width="20" height="20" rx="3"/><circle class="ac" cx="96" cy="22" r="5"/><path d="M60 96L34 112M60 96l26 16M60 96v16"/>'),
- 'Проектор 5000 лм':S('<rect x="10" y="48" width="92" height="40" rx="6"/><circle cx="76" cy="68" r="14"/><circle class="ac" cx="76" cy="68" r="7"/><path d="M18 58h30M18 66h30M18 74h30M24 88v8M88 88v8"/><path class="ac" d="M90 62L116 38M90 74L116 98"/>'),
- 'Экран на треноге 3×2 м':S('<rect x="12" y="12" width="96" height="62" rx="2"/><rect class="ac" x="18" y="18" width="84" height="50" rx="1" opacity=".6"/><path d="M60 74v22M60 96l-22 16M60 96l22 16M60 96v16"/>'),
- 'Тяжёлый дым':S('<rect x="10" y="66" width="62" height="32" rx="3"/><path d="M72 76h12v14H72M20 66v-7h16v7M20 80h40M20 88h40"/><circle class="ac" cx="92" cy="66" r="7"/><circle cx="102" cy="48" r="11"/><circle cx="84" cy="38" r="8"/><circle cx="104" cy="24" r="6"/>'),
- 'Холодные фонтаны':S('<rect x="50" y="82" width="20" height="26" rx="3"/><path class="ac" d="M60 78V22M56 78L38 34M64 78L82 34M52 80L24 54M68 80L96 54"/><circle cx="60" cy="18" r="2"/><circle cx="36" cy="30" r="2"/><circle cx="84" cy="30" r="2"/><circle cx="22" cy="50" r="2"/><circle cx="98" cy="50" r="2"/>'),
- 'Хлопушка с конфетти':S('<g transform="rotate(-18 60 90)"><path d="M48 106l4-44h16l4 44z"/><path d="M50 74h20"/></g><path class="ac" d="M70 40l6-4M86 28l4 6M58 26l-2-8M96 50l6 2M80 52l5 5M44 38l-6-3M104 34l-1-7M66 14l5 1"/>'),
- 'Генератор 10 кВт':S('<path d="M26 44V30h68v14"/><rect x="12" y="44" width="96" height="56" rx="4"/><rect x="20" y="52" width="40" height="40" rx="2"/><path class="ac" d="M42 56l-8 18h8l-4 14 14-20h-9l5-12z"/><circle cx="84" cy="64" r="6"/><circle cx="84" cy="84" r="6"/><path d="M20 100v8M100 100v8"/>'),
- 'Силовой распределитель':S(sock)
-};
-var photos={"Сабвуфер 18\"": "assets/sub-18.webp", "Активная акустика 15\"": "assets/active-15.webp", "DJ-комплект": "assets/dj.webp", "Вращающаяся голова Spot": "assets/head-spot.webp", "Вращающаяся голова Wash": "assets/head-wash.webp", "LED PAR, комплект 8 шт.": "assets/led-par.webp", "Ферма с подъёмом": "assets/truss.webp", "Сценический подиум 2×1 м": "assets/stage-deck.webp", "Линейный массив Meyer Sound": "assets/line-array.webp", "@Звук": "assets/line-array.webp", "@Свет": "assets/head-spot.webp", "@Сцена": "assets/truss.webp", "Микшерный пульт 16 каналов": "assets/mixer.webp", "Радиомикрофон ручной": "assets/mic.webp", "Радиосистема с гарнитурой": "assets/headset.webp", "Стробоскоп": "assets/strobe.webp", "Генератор дыма": "assets/smoke.webp", "Тяжёлый дым": "assets/smoke.webp", "Пульт управления светом": "assets/light-desk.webp", "Стойки для света и звука": "assets/stands.webp", "Проектор 5000 лм": "assets/projector.webp", "Экран на треноге 3×2 м": "assets/screen.webp", "Холодные фонтаны": "assets/sparkular.webp", "Хлопушка с конфетти": "assets/confetti.webp", "Генератор 10 кВт": "assets/generator.webp"};
-var items=[
- ["Звук","Акустические системы","Активная акустика 15\"","Для залов до 150 человек и выступлений.","от 2 500 ₽ / сутки",[["Мощность","1000 Вт"],["Макс. уровень","128 дБ"],["Вес","17 кг"]]],
- ["Звук","Акустические системы","Сабвуфер 18\"","Глубокий бас для танцев и концертов.","от 3 000 ₽ / сутки",[["Мощность","1500 Вт"],["Динамик","18\""],["Вес","38 кг"]]],
- ["Звук","Микшерные пульты","Микшерный пульт 16 каналов","Цифровой, со встроенными эффектами.","от 2 000 ₽ / сутки",[["Входы","16"],["Выходы","6 aux"],["Эффекты","да"]]],
- ["Звук","Микрофоны и радиосистемы","Радиомикрофон ручной","Для ведущих и выступающих.","от 800 ₽ / сутки",[["Диапазон","UHF"],["Дальность","до 100 м"],["Работа от батарей","8 часов"]]],
- ["Звук","Микрофоны и радиосистемы","Радиосистема с гарнитурой","Свободные руки для спикера.","от 1 000 ₽ / сутки",[["Диапазон","UHF"],["Дальность","до 100 м"],["Тип","головная гарнитура"]]],
- ["Звук","DJ-оборудование","DJ-комплект","Контроллер, мониторы и стойка.","от 4 500 ₽ / сутки",[["Каналы","4"],["Мониторы","2 шт."],["Стойка","входит"]]],
- ["Свет","Световые приборы","LED PAR, комплект 8 шт.","Заливающий цветной свет.","от 2 400 ₽ / сутки",[["Количество","8 шт."],["Цвета","RGBW"],["Управление","DMX"]]],
- ["Свет","Световые приборы","Вращающаяся голова Spot","Лучи и рисунки для шоу.","от 1 800 ₽ / сутки",[["Источник","LED 150 Вт"],["Гобо","есть"],["Управление","DMX"]]],
- ["Свет","Световые приборы","Вращающаяся голова Wash","Мягкая заливка и динамика.","от 1 500 ₽ / сутки",[["Источник","LED 19×15 Вт"],["Зум","есть"],["Управление","DMX"]]],
- ["Свет","Эффекты и управление","Стробоскоп","Яркие вспышки для танцпола.","от 600 ₽ / сутки",[["Мощность","1500 Вт"],["Скорость вспышек","регулируется"],["Управление","DMX"]]],
- ["Свет","Эффекты и управление","Генератор дыма","Дым для света и шоу.","от 1 000 ₽ / сутки",[["Мощность","1500 Вт"],["Выход","регулируется"],["Жидкость","входит"]]],
- ["Свет","Эффекты и управление","Пульт управления светом","Сценарии и программы света.","от 1 500 ₽ / сутки",[["Каналы DMX","512"],["Сцены","есть"],["Подключение","DMX"]]],
- ["Сцена","Конструкции","Сценический подиум 2×1 м","Модульный, регулируемая высота.","от 700 ₽ / сутки",[["Размер","2×1 м"],["Высота","40–100 см"],["Нагрузка","до 500 кг/м²"]]],
- ["Сцена","Конструкции","Стойки для света и звука","Надёжные, с утяжелителями.","от 500 ₽ / сутки",[["Высота","до 3,5 м"],["Нагрузка","до 40 кг"],["Утяжелители","входят"]]],
- ["Сцена","Конструкции","Ферма с подъёмом","Конструкция под подвес света.","расчёт по запросу",[["Размер","под площадку"],["Монтаж","наши техники"],["Расчёт","по запросу"]]],
- ["Видео","Проекция","Проектор 5000 лм","Для залов и презентаций.","от 3 500 ₽ / сутки",[["Яркость","5000 лм"],["Разрешение","Full HD"],["Подключение","HDMI"]]],
- ["Видео","Проекция","Экран на треноге 3×2 м","Быстро собирается.","от 1 200 ₽ / сутки",[["Размер","3×2 м"],["Тип","на треноге"],["Сборка","10 минут"]]],
- ["Видео","LED-экраны","LED-экран","Любой размер под площадку.","расчёт по запросу",[["Размер","под площадку"],["Шаг пикселя","по задаче"],["Монтаж","наши техники"]]]
- ,["Спецэффекты","Дым и пламя","Тяжёлый дым","Стелющийся дым для первого танца и шоу.","от 1 800 ₽ / сутки",[["Эффект","стелющийся дым"],["Выход","регулируется"],["Жидкость","входит"]]],
- ["Спецэффекты","Дым и пламя","Холодные фонтаны","Безопасные искры для свадеб и концертов.","от 3 000 ₽ / сутки",[["Высота","до 4 м"],["Комплект","2 фонтана"],["Управление","пульт"]]],
- ["Спецэффекты","Конфетти","Хлопушка с конфетти","Выброс конфетти или серпантина.","от 1 500 ₽ / сутки",[["Высота","до 8 м"],["Заряд","на выбор"],["Управление","пульт"]]],
- ["Энергия","Электропитание","Генератор 10 кВт","Тихий, для выездных площадок.","от 6 000 ₽ / сутки",[["Мощность","10 кВт"],["Топливо","бензин"],["Шум","до 68 дБ"]]],
- ["Энергия","Электропитание","Силовой распределитель","Безопасная раздача питания на площадке.","от 1 200 ₽ / сутки",[["Выходы","6 × 220 В"],["Защита","УЗО"],["Вход","32 А"]]]
- ,["Звук","Акустические системы","Линейный массив Meyer Sound","Подвесной массив для больших залов и площадок.","расчёт по запросу",[["Конфигурация","подвесной массив"],["Мощность","по расчёту"],["Монтаж","наши техники"]]]
-];
 var tileIcons={
  "Звук":'<svg viewBox="0 0 64 64"><path class="bf" d="M18 8h28a3 3 0 0 1 3 3v42a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"/><rect x="15" y="8" width="34" height="48" rx="3"/><circle cx="32" cy="19" r="5"/><circle class="a f" cx="32" cy="19" r="1.6"/><circle cx="32" cy="40" r="11"/><circle cx="32" cy="40" r="6.5"/><circle class="a f" cx="32" cy="40" r="2.4"/><path d="M19 52h2M43 52h2"/><path class="a w1" d="M54 33q3 7 0 14"/><path class="a w2" d="M58.5 29q5 11 0 22"/></svg>',
  "Свет":'<svg viewBox="0 0 64 64"><path class="beam" d="M26 19L9 1h46L38 19z"/><path class="a" d="M26.5 18.5L15 4M37.5 18.5L49 4"/><path class="bf" d="M16 50h32v8H16z"/><rect x="14" y="50" width="36" height="8" rx="2"/><path d="M19 50V31a5 5 0 0 1 5-5M45 50V31a5 5 0 0 0-5-5"/><circle cx="32" cy="31" r="12"/><circle cx="32" cy="31" r="7.5"/><circle cx="32" cy="31" r="4.5" class="g"/><circle class="a f" cx="32" cy="31" r="2.4"/><circle class="a f" cx="44" cy="54" r="1.2"/><path d="M19 54h14"/></svg>',
@@ -757,146 +733,148 @@ var tileIcons={
  "Спецэффекты":'<svg viewBox="0 0 64 64"><path class="bf" d="M24 46h16v12H24z"/><rect x="22" y="45" width="20" height="13" rx="2"/><path d="M26 51h12"/><path class="a s1" d="M32 42V16"/><path class="a s2" d="M29 42l-9-20M35 42l9-20"/><path class="a s3" d="M27 43L13 30M37 43l14-13"/><circle class="a f s1" cx="32" cy="11" r="1.8"/><circle class="a f s2" cx="18" cy="18" r="1.5"/><circle class="a f s2" cx="46" cy="18" r="1.5"/><circle class="a f s3" cx="10" cy="27" r="1.3"/><circle class="a f s3" cx="54" cy="27" r="1.3"/><path class="a s3" d="M24 8l1.5 3M40 8l-1.5 3"/></svg>',
  "Энергия":'<svg viewBox="0 0 64 64"><path class="bf" d="M10 21h44v29H10z"/><path d="M21 20v-6h22v6"/><rect x="8" y="20" width="48" height="32" rx="4"/><path class="a f" d="M33 24L22 39h8l-3 10 12-16h-8l3-9z"/><circle cx="47" cy="29" r="4"/><path d="M47 29l2-2"/><path d="M44 38h6M44 43h6"/><circle cx="16" cy="56" r="3"/><circle cx="48" cy="56" r="3"/><path d="M14 26h4M14 31h4"/></svg>'
 };
-var cats=Object.keys(icons),cur="Звук",query="";
-var side=document.getElementById("side"),list=document.getElementById("list"),detail=document.getElementById("detail");
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
-function slug(s){return "s"+s.length+s.charCodeAt(0)+s.charCodeAt(s.length-1)}
-function subsOf(c){var r=[];items.forEach(function(i){if(i[0]===c&&r.indexOf(i[1])<0)r.push(i[1])});return r}
-function pic(it,eager){var p=photos[it[2]];return p?'<img class="ph" alt="'+esc(it[2])+'" src="'+p+'"'+(eager?'':' loading="lazy"')+'>':(arts[it[2]]||icons[it[0]])}
-function priceNum(it){var m=String(it[4]).replace(/\s/g,"").match(/(\d+)/);return m?+m[1]:0}
-function rub(n){return n.toLocaleString("ru-RU")+" ₽"}
-function idxOf(name){for(var k=0;k<items.length;k++)if(items[k][2]===name)return k;return -1}
 
-/* ---------- Смета ---------- */
-var cart={};
-try{cart=JSON.parse(localStorage.getItem("tshow-cart")||"{}")||{}}catch(e){cart={}}
-Object.keys(cart).forEach(function(k){if(idxOf(k)<0)delete cart[k]});
-function saveCart(){try{localStorage.setItem("tshow-cart",JSON.stringify(cart))}catch(e){}}
-function cartCount(){return Object.keys(cart).reduce(function(a,k){return a+cart[k]},0)}
-function cartTotal(){var t=0,req=false;Object.keys(cart).forEach(function(k){var p=priceNum(items[idxOf(k)]);if(p)t+=p*cart[k];else req=true});return {t:t,req:req}}
-function addToCart(name,q){cart[name]=(cart[name]||0)+(q||1);saveCart();renderCart()}
-function setQty(name,q){if(q<=0)delete cart[name];else cart[name]=q;saveCart();renderCart()}
-function renderCart(){
- var n=cartCount(),tt=cartTotal();
- ["hdrCount","mCount"].forEach(function(id){document.getElementById(id).textContent=n||""});
- document.getElementById("cartCount").textContent=n;
- document.getElementById("cartSum").textContent=tt.t?"· от "+rub(tt.t):"";
- document.getElementById("cartBtn").classList.toggle("show",n>0);
- var keys=Object.keys(cart);
- document.getElementById("cartList").innerHTML=keys.length?keys.map(function(k){var it=items[idxOf(k)],p=priceNum(it);
-  return '<div class="ci"><div class="im">'+pic(it)+'</div><div><h4>'+esc(k)+'</h4><small>'+(p?rub(p)+' / сутки':'по запросу')+'</small></div><div class="qty"><button type="button" data-q="-1" data-n="'+esc(k)+'" aria-label="Меньше">−</button><span>'+cart[k]+'</span><button type="button" data-q="1" data-n="'+esc(k)+'" aria-label="Больше">+</button></div></div>'}).join("")
-  :'<div class="pn-empty">Смета пока пустая.<br>Добавляйте позиции из каталога или готовый комплект.</div>';
- document.getElementById("cartTotal").textContent=(tt.t?"от "+rub(tt.t):"—")+(tt.req?" +":"");
- document.getElementById("cartNote").textContent="Цена за сутки по базовым тарифам."+(tt.req?" Позиции «по запросу» посчитаем отдельно.":"")+" Доставка, монтаж и техник — в смете.";
- var pk=document.getElementById("picked");pk.classList.toggle("show",n>0);
- document.getElementById("pickedList").innerHTML=keys.map(function(k){return '<li>'+esc(k)+' × '+cart[k]+'</li>'}).join("")+(tt.t?'<li style="color:var(--accent);margin-top:4px">Ориентир: от '+rub(tt.t)+' / сутки</li>':'');
- document.querySelectorAll(".add").forEach(function(b){var on=!!cart[b.dataset.n];b.classList.toggle("on",on);b.textContent=on?"✓ В смете":"+ В смету"});
-}
-var drawer=document.getElementById("drawer");
-function openCart(){drawer.classList.add("open");document.body.style.overflow="hidden"}
-function closeCart(){drawer.classList.remove("open");if(detail.hidden)document.body.style.overflow=""}
-document.addEventListener("click",function(e){
- var o=e.target.closest("[data-open-cart]");if(o){e.preventDefault();openCart();return}
- var c=e.target.closest("[data-close]");if(c){closeCart();return}
- var q=e.target.closest("[data-q]");if(q){setQty(q.dataset.n,(cart[q.dataset.n]||0)+(+q.dataset.q));return}
- var a=e.target.closest(".add");if(a){e.preventDefault();if(cart[a.dataset.n])setQty(a.dataset.n,0);else addToCart(a.dataset.n);return}
- var pk=e.target.closest("[data-pack]");if(pk){e.preventDefault();packs[+pk.dataset.pack].items.forEach(function(x){addToCart(x[0],x[1])});openCart()}
-});
-document.getElementById("cartClear").onclick=function(){cart={};saveCart();renderCart()};
-document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(drawer.classList.contains("open"))closeCart();else if(!detail.hidden)location.hash="catalog"});
-
-/* ---------- Каталог ---------- */
-function card(i){var it=items[i];
- return '<div class="card"><a class="cl" href="#item-'+i+'"><div class="thumb"><em>'+it[0]+'</em>'+pic(it)+'</div><div class="body"><h3>'+esc(it[2])+'</h3><p>'+esc(it[3])+'</p><div class="avail">В наличии</div><div class="price">'+esc(it[4])+'</div><span class="more">Подробнее →</span></div></a><button type="button" class="add" data-n="'+esc(it[2])+'">+ В смету</button></div>'}
-function draw(){
- side.innerHTML='<div class="k2">// РАЗДЕЛЫ //</div>'+cats.map(function(c){
-  var n=items.filter(function(i){return i[0]===c}).length;
-  var on=c===cur&&!query;
-  var s='<button class="sbtn" aria-pressed="'+on+'" data-c="'+c+'">'+c+'<b>'+n+'</b></button>';
-  if(on)s+='<div class="subs">'+subsOf(c).map(function(x){return '<a href="#" data-g="'+slug(x)+'">'+esc(x)+'</a>'}).join("")+'</div>';
-  return s}).join("");
- if(query){
-  var w=query.toLowerCase(),idx=[];
-  items.forEach(function(it,i){if((it[0]+" "+it[1]+" "+it[2]+" "+it[3]).toLowerCase().indexOf(w)>=0)idx.push(i)});
-  list.innerHTML=idx.length?'<div class="grp"><div class="grp-h"><h3>Найдено</h3><span>'+idx.length+' поз.</span></div><div class="grid">'+idx.map(card).join("")+'</div></div>'
-   :'<div class="empty">Ничего не нашли по запросу «'+esc(query)+'». Позвоните — подберём аналог или привезём под заказ.</div>';
- }else{
-  list.innerHTML=subsOf(cur).map(function(sub){
-   var idx=[];items.forEach(function(it,i){if(it[0]===cur&&it[1]===sub)idx.push(i)});
-   return '<div class="grp" id="'+slug(sub)+'"><div class="grp-h"><h3>'+esc(sub)+'</h3><span>'+idx.length+' поз.</span></div><div class="grid">'+idx.map(card).join("")+'</div></div>'}).join("");
- }
- renderCart();
-}
-function goCat(c){cur=c;query="";document.getElementById("q").value="";draw();document.getElementById("catalog").scrollIntoView({behavior:"smooth"})}
-side.addEventListener("click",function(e){
- var b=e.target.closest(".sbtn"),g=e.target.closest("[data-g]");
- if(b){cur=b.dataset.c;query="";document.getElementById("q").value="";draw()}
- if(g){e.preventDefault();var t=document.getElementById(g.dataset.g);if(t)t.scrollIntoView({behavior:"smooth"})}
-});
-document.getElementById("q").addEventListener("input",function(){query=this.value.trim();draw()});
-
-/* ---------- Карточка товара ---------- */
-function showDetail(i){
- var it=items[i];if(!it){location.hash="catalog";return}
- var sim=[];items.forEach(function(x,k){if(x[0]===it[0]&&k!==i&&sim.length<3)sim.push(k)});
- detail.innerHTML='<div class="d-bar"><div class="wrap"><a class="back" href="#catalog">← Каталог</a><a href="#top" class="logo"><img alt="T-SHOW" src="assets/logo.webp"></a></div></div>'+
- '<div class="wrap d-main"><div class="crumb"><a href="#top">Главная</a> / <a href="#catalog">Оборудование</a> / <a href="#catalog" data-cat="'+it[0]+'">'+it[0]+'</a> / '+esc(it[2])+'</div>'+
- '<div class="d-grid"><div class="thumb d-thumb"><em>'+it[0]+'</em>'+pic(it,true)+'</div><div><span class="tag">// '+esc(it[1]).toUpperCase()+' //</span><h1>'+esc(it[2])+'</h1><p>'+esc(it[3])+' В аренду входят кабели, крепёж и проверка перед выдачей. Доставка и монтаж по запросу.</p>'+
- '<div class="avail">В наличии</div><div class="d-price">'+esc(it[4])+'</div><div class="cta" style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn fill" id="dreq" type="button">+ Добавить в смету</button><a class="btn" href="tel:'+TEL+'">Позвонить</a></div></div></div>'+
- '<h2>Характеристики</h2><table>'+it[5].map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'}).join("")+'</table>'+
- '<h2>Похожие позиции</h2><div class="grid">'+sim.map(card).join("")+'</div></div>';
- detail.hidden=false;detail.scrollTop=0;document.body.style.overflow="hidden";
- var dr=document.getElementById("dreq");
- function upd(){dr.textContent=cart[it[2]]?"✓ В смете — открыть":"+ Добавить в смету"}
- dr.onclick=function(){if(cart[it[2]])openCart();else{addToCart(it[2]);upd()}};upd();
- detail.querySelectorAll("[data-cat]").forEach(function(a){a.onclick=function(){cur=a.dataset.cat;query="";draw()}});
- renderCart();
-}
-function route(){
- var m=location.hash.match(/^#item-(\d+)$/);
- if(m){showDetail(+m[1])}else{detail.hidden=true;if(!drawer.classList.contains("open"))document.body.style.overflow=""}
-}
-window.addEventListener("hashchange",route);
-
-/* ---------- Готовые комплекты ---------- */
-var packs=[
- {t:"Свадьба",who:"банкет до 80 гостей",img:"Активная акустика 15\"",items:[["Активная акустика 15\"",2],["Сабвуфер 18\"",1],["Микшерный пульт 16 каналов",1],["Радиомикрофон ручной",2],["LED PAR, комплект 8 шт.",1],["Тяжёлый дым",1]]},
- {t:"Корпоратив",who:"зал до 150 гостей",img:"DJ-комплект",hot:true,items:[["Активная акустика 15\"",2],["Сабвуфер 18\"",2],["DJ-комплект",1],["Радиомикрофон ручной",2],["LED PAR, комплект 8 шт.",1],["Вращающаяся голова Spot",2]]},
- {t:"Конференция",who:"доклады и презентации",img:"Проектор 5000 лм",items:[["Активная акустика 15\"",2],["Микшерный пульт 16 каналов",1],["Радиомикрофон ручной",2],["Радиосистема с гарнитурой",1],["Проектор 5000 лм",1],["Экран на треноге 3×2 м",1]]},
- {t:"Концерт / вечеринка",who:"сцена и танцпол",img:"Вращающаяся голова Spot",items:[["Активная акустика 15\"",2],["Сабвуфер 18\"",2],["Микшерный пульт 16 каналов",1],["Вращающаяся голова Spot",2],["Вращающаяся голова Wash",2],["Стробоскоп",1],["Генератор дыма",1],["Пульт управления светом",1]]}
+/* ---------- Направления ---------- */
+var DIRS=[
+ {k:"sound",ic:"Звук",t:"Звук и линейные массивы",tile:"Звук и линейные массивы",img:"assets/line-array.webp",
+  d:"Звук, который одинаково хорошо слышно в каждом ряду: от речи ведущего на банкете до концерта на площади.",
+  f:["свадьбы и банкеты","корпоративы и выпускные","концерты и фестивали"],
+  i:["акустические системы и сабвуферы","линейные массивы для больших площадок","радиомикрофоны и гарнитуры","пульты и DJ-оборудование"]},
+ {k:"light",ic:"Свет",t:"Световые шоу",tile:"Световые шоу",img:"assets/head-spot.webp",
+  d:"Свет, который создаёт настроение: мягкая заливка зала, лучи на танцполе и динамичное шоу под музыку.",
+  f:["первый танец и банкет","вечеринки и танцпол","концертная сцена"],
+  i:["цветная заливка зала и декора","вращающиеся головы и лучи","стробоскопы и световые эффекты","программирование шоу под сценарий"]},
+ {k:"led",ic:"Видео",t:"Светодиодные экраны",tile:"Светодиодные экраны",img:"",
+  d:"Яркая картинка, которую видно даже днём: презентации, трансляции, видеозаставки и оформление сцены.",
+  f:["конференции и презентации","концерты и фестивали","выставки и городские праздники"],
+  i:["LED-экраны нужного размера","проекторы и экраны для залов","трансляция с камер на экран","монтаж конструкций под площадку"]},
+ {k:"stage",ic:"Сцена",t:"Сцены и подиумы",tile:"Сцены и подиумы",img:"assets/truss.webp",
+  d:"Сцена под задачу: от подиума для ведущего до концертной площадки с фермами для света и экранов.",
+  f:["выступления и ведущие","концерты и фестивали","показы, церемонии, открытия"],
+  i:["подиумы любой площади и высоты","концертные сцены","фермовые конструкции и арки","подвес света и экранов"]},
+ {k:"fx",ic:"Спецэффекты",t:"Спецэффекты",tile:"Спецэффекты",img:"assets/sparkular.webp",
+  d:"Моменты, которые запоминаются: тяжёлый дым на первый танец, холодные искры, конфетти в финале.",
+  f:["первый танец на свадьбе","выход артистов и финал шоу","торжественные открытия"],
+  i:["тяжёлый дым","холодные фонтаны — безопасные искры","конфетти и серпантин","дым для световых лучей"]},
+ {k:"tech",ic:"Энергия",t:"Монтаж и техническое сопровождение",tile:"Монтаж и техник",img:"assets/generator.webp",
+  d:"Берём на себя всю техническую часть: привезём, соберём, проведём событие и всё увезём.",
+  f:["события любого масштаба","выездные площадки","мероприятия с плотным таймингом"],
+  i:["доставка, монтаж и демонтаж","звукорежиссёр и художник по свету","электропитание и генераторы","координация на площадке"]}
 ];
-document.getElementById("packList").innerHTML=packs.map(function(p,k){
- var sum=p.items.reduce(function(a,x){return a+priceNum(items[idxOf(x[0])])*x[1]},0);
- return '<div class="pack'+(p.hot?' hot':'')+'"><div class="pack-top"><em>Комплект</em><img alt="" loading="lazy" src="'+photos[p.img]+'"></div><div class="pack-b"><h3>'+p.t+'</h3><div class="who2">'+p.who+'</div><ul>'+
-  p.items.map(function(x){return '<li><span>'+esc(x[0])+'</span><b>× '+x[1]+'</b></li>'}).join("")+'</ul><div class="pp">от <span class="cnt" data-to="'+sum+'" data-rub="1">'+rub(sum)+'</span><small>за сутки, без доставки и монтажа</small></div><button type="button" class="btn fill" data-pack="'+k+'">Добавить в смету</button></div></div>'}).join("");
+function dirBy(k){for(var j=0;j<DIRS.length;j++)if(DIRS[j].k===k)return DIRS[j]}
+function dirArt(d,cls){return d.img?'<img class="'+(cls||"")+'" alt="'+esc(d.t)+'" loading="lazy" src="'+d.img+'">':'<span class="dico">'+tileIcons[d.ic]+'</span>'}
 
-draw();route();
+/* выбранное в заявку */
+var picks={},bSummary="";
+try{picks=JSON.parse(localStorage.getItem("tshow-picks")||"{}")||{}}catch(e){picks={}}
+function savePicks(){try{localStorage.setItem("tshow-picks",JSON.stringify(picks))}catch(e){}}
+function togglePick(k,on){if(on===undefined)on=!picks[k];if(on)picks[k]=1;else delete picks[k];savePicks();paintPicks()}
+function paintPicks(){
+ var n=Object.keys(picks).length;
+ ["hdrCount","mCount"].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=n||""});
+ document.querySelectorAll("[data-pick]").forEach(function(b){var on=!!picks[b.dataset.pick];b.classList.toggle("on",on);b.setAttribute("aria-pressed",on);
+  if(b.classList.contains("dadd"))b.textContent=on?"✓ В заявке":"+ Добавить в заявку"});
+ var bs=document.getElementById("bSum");bs.hidden=!bSummary;bs.innerHTML=bSummary?'<b>Подбор под событие</b>'+bSummary+'<button type="button" id="bClr">Убрать</button>':"";
+ var c=document.getElementById("bClr");if(c)c.onclick=function(){bSummary="";paintPicks()};
+}
+document.addEventListener("click",function(e){var b=e.target.closest("[data-pick]");if(b){e.preventDefault();togglePick(b.dataset.pick)}});
 
-/* Парк оборудования, эквалайзер, появление при прокрутке */
-var parkL=["Звук","Свет","Видео"],parkR=["Сцена","Спецэффекты","Энергия"],
- pname={"Звук":"Звуковое оборудование","Свет":"Световое оборудование","Видео":"Мультимедиа оборудование","Сцена":"Сценическое оборудование","Спецэффекты":"Сценические спецэффекты","Энергия":"Энерго-обеспечение"};
+/* карточки направлений */
+document.getElementById("dirList").innerHTML=DIRS.map(function(d,n){
+ return '<article class="dir" id="d-'+d.k+'"><div class="dir-ph">'+dirArt(d,"ph")+'<span class="dir-n">0'+(n+1)+'</span></div><div class="dir-b"><h3>'+esc(d.t)+'</h3><p>'+esc(d.d)+'</p>'+
+  '<div class="dir-cols"><div><b>Подойдёт для</b><ul>'+d.f.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></div><div><b>Что входит</b><ul>'+d.i.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></div></div>'+
+  '<button class="dadd" type="button" data-pick="'+d.k+'">+ Добавить в заявку</button></div></article>'}).join("");
+/* чипы в форме */
+document.getElementById("fDirs").innerHTML=DIRS.map(function(d){return '<button type="button" class="chip" data-pick="'+d.k+'">'+esc(d.tile)+'</button>'}).join("");
+function goDir(k){var el=document.getElementById("d-"+k);if(el){el.scrollIntoView({behavior:"smooth",block:"center"});el.classList.add("flash");setTimeout(function(){el.classList.remove("flash")},1400)}}
+
+/* парк направлений (центр с картинкой) */
+var parkL=["sound","light","led"],parkR=["stage","fx","tech"];
 var art=document.getElementById("art");
-function setArt(c){var q=photos["@"+c];art.innerHTML=q?'<img alt="" src="'+q+'">':icons[c];document.querySelectorAll(".pi").forEach(function(b){b.classList.toggle("on",b.dataset.c===c)})}
-function pbtn(c,n){return '<button class="pi" data-c="'+c+'"><small>0'+n+'</small><span>'+pname[c]+'</span></button>'}
-document.getElementById("pl").innerHTML=parkL.map(function(c,k){return pbtn(c,k+1)}).join("");
-document.getElementById("pr").innerHTML=parkR.map(function(c,k){return pbtn(c,k+4)}).join("");
-document.getElementById("park").addEventListener("mouseover",function(e){var b=e.target.closest(".pi");if(b)setArt(b.dataset.c)});
-document.getElementById("park").addEventListener("click",function(e){
- var b=e.target.closest(".pi");if(!b)return;
- if(window.matchMedia("(hover:none)").matches&&!b.classList.contains("on")){setArt(b.dataset.c);return}
- goCat(b.dataset.c);
-});
-setArt("Звук");
-var eq=document.getElementById("eq"),bars="";
-for(var q=0;q<48;q++)bars+='<i style="animation-delay:-'+(Math.random()*1.4).toFixed(2)+'s;animation-duration:'+(0.9+Math.random()*1.1).toFixed(2)+'s"></i>';
-eq.innerHTML=bars;
-var rvs=document.querySelectorAll(".rv,.svc,.step,.pack,.why>div");
+function setArt(k){var d=dirBy(k);art.innerHTML=d.img?'<img alt="" src="'+d.img+'">':tileIcons[d.ic];art.classList.toggle("icn",!d.img);
+ document.querySelectorAll(".pi").forEach(function(b){b.classList.toggle("on",b.dataset.k===k)})}
+function pbtn(k,n){return '<button class="pi" data-k="'+k+'"><small>0'+n+'</small><span>'+esc(dirBy(k).t)+'</span></button>'}
+document.getElementById("pl").innerHTML=parkL.map(function(k,j){return pbtn(k,j+1)}).join("");
+document.getElementById("pr").innerHTML=parkR.map(function(k,j){return pbtn(k,j+4)}).join("");
+document.getElementById("park").addEventListener("mouseover",function(e){var b=e.target.closest(".pi");if(b)setArt(b.dataset.k)});
+document.getElementById("park").addEventListener("click",function(e){var b=e.target.closest(".pi");if(!b)return;
+ if(window.matchMedia("(hover:none)").matches&&!b.classList.contains("on")){setArt(b.dataset.k);return}goDir(b.dataset.k)});
+setArt("sound");
+
+/* ---------- Подбор под событие ---------- */
+(function(){
+ var F=["Свадьба","Корпоратив","Концерт / фестиваль","Конференция","Выпускной","Городской праздник"],fmt="Свадьба";
+ var G=[20,30,50,80,100,150,200,300,500,700,1000,1500,2000,3000,5000],gi=4;
+ var DEF={"Свадьба":["sound","light","fx","tech"],"Корпоратив":["sound","light","tech"],"Концерт / фестиваль":["sound","light","led","stage","fx","tech"],
+  "Конференция":["sound","led","stage","tech"],"Выпускной":["sound","light","fx","tech"],"Городской праздник":["sound","light","led","stage","fx","tech"]};
+ var need={};
+ function setDef(){need={};DEF[fmt].forEach(function(k){need[k]=1});if(G[gi]>500){need.led=1;need.stage=1}need.tech=1}
+ var fe=document.getElementById("bFmt"),ne=document.getElementById("bNeed"),gs=document.getElementById("bGs");
+ fe.innerHTML=F.map(function(f){return '<button class="opt" type="button" data-f="'+f+'" aria-pressed="'+(f===fmt)+'">'+f+'</button>'}).join("");
+ function drawNeed(){ne.innerHTML=DIRS.map(function(d){return '<button class="tgl" type="button" data-k="'+d.k+'" aria-pressed="'+!!need[d.k]+'"><span>'+esc(d.tile)+'</span><span class="sw"></span></button>'}).join("")}
+ fe.addEventListener("click",function(e){var b=e.target.closest(".opt");if(!b)return;fmt=b.dataset.f;fe.querySelectorAll(".opt").forEach(function(x){x.setAttribute("aria-pressed",x===b)});setDef();drawNeed();calc()});
+ ne.addEventListener("click",function(e){var b=e.target.closest(".tgl");if(!b)return;need[b.dataset.k]=need[b.dataset.k]?0:1;drawNeed();calc()});
+ gs.addEventListener("input",function(){var was=G[gi]>500;gi=+this.value;if(!was&&G[gi]>500){need.led=1;need.stage=1;drawNeed()}calc()});
+ function rec(k,g){var s=g<=100?0:g<=500?1:2,wed=fmt==="Свадьба",conf=fmt==="Конференция";
+  var R={
+   sound:[conf?"Колонки для зала, радиомикрофоны и гарнитуры для спикеров":"Компактная система: колонки, сабвуфер, радиомикрофоны",
+          conf?"Мощная система для зала, микрофоны для спикеров и звукорежиссёр":"Мощная система с сабвуферами, микрофоны и звукорежиссёр",
+          "Линейные массивы, сабвуферы и мониторы для сцены"],
+   light:[wed?"Тёплая заливка зала и акцентный свет на первый танец":"Цветная заливка зала и свет на танцпол",
+          "Световое шоу: вращающиеся головы, лучи, стробоскопы","Концертный свет на фермах и программирование шоу"],
+   led:["Проектор и экран для презентаций и видео","LED-экран у сцены для видео и трансляции","Большие LED-экраны и трансляция с камер"],
+   stage:[conf?"Подиум для спикеров":"Подиум для ведущего и музыкантов","Сцена с подиумами и фермой под свет","Концертная сцена с фермовыми конструкциями"],
+   fx:[wed?"Тяжёлый дым и холодные искры на первый танец":"Холодные искры и дым для эффектных моментов","Холодные фонтаны, дым и конфетти в финале","Залповые эффекты: искры, конфетти, дым для выхода артистов"],
+   tech:["Доставка, монтаж и техник на площадке","Монтаж, звукорежиссёр и художник по свету","Монтажная бригада, техническая команда и электропитание"]
+  };return R[k][s]}
+ var last=[];
+ function calc(){
+  var g=G[gi];document.getElementById("bGv").textContent=g>=5000?"5000+":g;
+  gs.style.setProperty("--p",(gi/(G.length-1)*100)+"%");
+  last=DIRS.filter(function(d){return need[d.k]}).map(function(d){return [d,rec(d.k,g)]});
+  document.getElementById("bSub").textContent=fmt+" · "+(g>=5000?"5000+":g)+" гостей · "+(g<=100?"камерное событие":g<=500?"крупное мероприятие":"масштабный проект");
+  document.getElementById("bList").innerHTML=last.length?last.map(function(x,n){return '<li style="animation-delay:'+(n*.04)+'s"><span class="im">'+tileIcons[x[0].ic]+'</span><span><b>'+esc(x[0].tile)+'</b>'+esc(x[1])+'</span></li>'}).join("")
+   :'<li style="grid-template-columns:1fr;color:var(--muted)">Отметьте хотя бы одно направление</li>';
+  document.getElementById("bAdd").disabled=!last.length;
+ }
+ document.getElementById("bAdd").onclick=function(){
+  var g=G[gi];last.forEach(function(x){picks[x[0].k]=1});savePicks();
+  bSummary='<p>'+esc(fmt)+', '+(g>=5000?"5000+":g)+' гостей</p><ul>'+last.map(function(x){return '<li>'+esc(x[0].tile)+': '+esc(x[1])+'</li>'}).join("")+'</ul>';
+  window.bText=fmt+", "+(g>=5000?"5000+":g)+" гостей\n"+last.map(function(x){return "— "+x[0].tile+": "+x[1]}).join("\n");
+  var m=document.getElementById("msg");if(m&&!m.value)m.value=fmt+", "+(g>=5000?"5000+":g)+" гостей";
+  paintPicks();document.getElementById("contacts").scrollIntoView({behavior:"smooth"})};
+ setDef();drawNeed();calc();
+})();
+
+/* ---------- Первый экран ---------- */
+(function(){
+ var e=document.getElementById("eqp"),h="",n=17,k,hh;
+ for(k=0;k<n;k++){hh=22+Math.round(58*Math.sin(Math.PI*(k+.5)/n));h+='<i style="height:'+hh+'px;animation-delay:-'+(Math.random()*1.5).toFixed(2)+'s;animation-duration:'+(1+Math.random()*.9).toFixed(2)+'s"></i>'}
+ e.innerHTML=h;
+ var t=document.getElementById("tiles");
+ t.innerHTML=DIRS.map(function(d){return '<button class="tile" type="button" data-k="'+d.k+'"><span class="ic">'+tileIcons[d.ic]+'</span><span>'+esc(d.tile)+'</span></button>'}).join("");
+ t.addEventListener("click",function(ev){var b=ev.target.closest(".tile");if(b)goDir(b.dataset.k)});
+ document.getElementById("facts").innerHTML=
+  '<div><b><span class="cnt" data-to="6">6</span></b><span>направлений под ключ</span></div>'+
+  '<div><b><span class="cnt" data-to="5000">5000</span><em>+</em></b><span>гостей — любой масштаб</span></div>'+
+  '<div><b><span class="cnt" data-to="9" data-from="0">9</span><em>–</em><span class="cnt" data-to="21" data-from="0">21</span></b><span>на связи ежедневно</span></div>'+
+  '<div><b><span class="cnt" data-to="1">1</span> <em>час</em></b><span>на расчёт стоимости</span></div>';
+ var eq=document.getElementById("eq"),bars="";
+ for(var q=0;q<48;q++)bars+='<i style="animation-delay:-'+(Math.random()*1.4).toFixed(2)+'s;animation-duration:'+(0.9+Math.random()*1.1).toFixed(2)+'s"></i>';
+ eq.innerHTML=bars;
+})();
+(function(){var im=document.querySelector(".logo img");if(im)document.documentElement.style.setProperty("--wm","url("+im.src+")")})();
+(function(){var im=document.querySelector(".big-wm img");if(im)document.documentElement.style.setProperty("--wm2","url("+im.src+")")})();
+
+/* появление при прокрутке */
+var rvs=document.querySelectorAll(".rv,.step,.why>div,.dir,.sc");
 if("IntersectionObserver" in window){
- var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.15});
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.12});
  rvs.forEach(function(n){n.classList.add("rv");io.observe(n)});
 }else{rvs.forEach(function(n){n.classList.add("in")})}
 
-/* Заявка */
+/* ---------- Заявка ---------- */
 var telI=document.getElementById("tel");
 telI.addEventListener("input",function(){
  var d=this.value.replace(/\D/g,"");if(!d){this.value="";return}
@@ -909,20 +887,19 @@ document.getElementById("form").addEventListener("submit",function(e){
  e.preventDefault();
  var n=document.getElementById("name").value.trim(),t=telI.value.trim(),
      d=document.getElementById("date").value,msg=document.getElementById("msg").value.trim(),ok=document.getElementById("ok").checked,
-     note=document.getElementById("note"),btn=document.getElementById("sendBtn"),form=this;
+     note=document.getElementById("note"),btn=document.getElementById("sendBtn");
  if(document.getElementById("honey").value)return;
  if(!n||t.replace(/\D/g,"").length<11){note.textContent="Укажите имя и телефон полностью.";return}
  if(!ok){note.textContent="Подтвердите согласие на обработку данных.";return}
  var ds=d?d.split("-").reverse().join("."):"";
- var keys=Object.keys(cart),tt=cartTotal();
- var smeta=keys.map(function(k){return k+" × "+cart[k]}).join("\n");
- var lines=["Здравствуйте! Заявка на аренду с сайта T-SHOW.","Имя: "+n,"Телефон: "+t];
- if(ds)lines.push("Дата: "+ds);if(msg)lines.push("Комментарий: "+msg);
- if(keys.length){lines.push("","Смета:");keys.forEach(function(k){lines.push("— "+k+" × "+cart[k])});if(tt.t)lines.push("Ориентир: от "+rub(tt.t)+" / сутки"+(tt.req?" + позиции по запросу":""))}
+ var dirs=DIRS.filter(function(x){return picks[x.k]}).map(function(x){return x.t});
+ var lines=["Здравствуйте! Заявка с сайта T-SHOW.","Имя: "+n,"Телефон: "+t];
+ if(ds)lines.push("Дата: "+ds);if(dirs.length)lines.push("Нужно: "+dirs.join(", "));
+ if(bSummary&&window.bText)lines.push("","Подбор: "+window.bText);if(msg)lines.push("Комментарий: "+msg);
  var wa="https://wa.me/"+WA+"?text="+encodeURIComponent(lines.join("\n"));
  var data={_subject:"Заявка с сайта T-SHOW: "+n+", "+t,_template:"table",_captcha:"false",
-  "Имя":n,"Телефон":t,"Дата мероприятия":ds||"не указана","Комментарий":msg||"—",
-  "Смета":smeta||"не собрана","Ориентир по смете":tt.t?("от "+rub(tt.t)+" / сутки"+(tt.req?" + позиции по запросу":"")):"—"};
+  "Имя":n,"Телефон":t,"Дата мероприятия":ds||"не указана","Что нужно":dirs.join(", ")||"не выбрано",
+  "Подбор под событие":(bSummary&&window.bText)?window.bText:"—","Комментарий":msg||"—"};
  btn.disabled=true;btn.textContent="Отправляем…";note.textContent="";
  var done=false,slow=setTimeout(function(){if(!done)btn.textContent="Ещё немного…"},6000);
  var ctl=window.AbortController?new AbortController():null,timer=setTimeout(function(){if(!done&&ctl)ctl.abort("timeout")},60000);
@@ -932,7 +909,7 @@ document.getElementById("form").addEventListener("submit",function(e){
    if(text)document.querySelector("#sent p").innerHTML=text;
    ["name","tel","date","msg"].forEach(function(id){document.getElementById(id).value=""});
    document.getElementById("ok").checked=false;
-   cart={};saveCart();renderCart();
+   picks={};bSummary="";savePicks();paintPicks();
    btn.textContent="Отправлено ✓";
    setTimeout(function(){btn.disabled=false;btn.textContent="Отправить заявку"},4000);
  }
@@ -945,74 +922,17 @@ document.getElementById("form").addEventListener("submit",function(e){
    if(err&&(err.name==="AbortError"||why==="timeout")){
     okSent('Сервис доставки отвечает дольше обычного, но заявка, скорее всего, уже у нас. Если не перезвоним в течение часа — <a href="'+wa+'" target="_blank" rel="noopener">напишите в WhatsApp</a> или позвоните 8 917 004-26-28.');return}
    btn.disabled=false;btn.textContent="Отправить заявку";
-   if(window.console)console.warn("Заявка не отправлена:",why);
-   if(/activat/i.test(why)){note.innerHTML='Форма ещё не активирована: владельцу сайта отправлено письмо со ссылкой «Activate Form». Пока можно <a href="'+wa+'" target="_blank" rel="noopener">отправить заявку в WhatsApp</a>.<br><small style="color:var(--muted)">'+esc(why)+'</small>';return}
-   note.innerHTML='<small style="color:var(--muted);display:block">Причина: '+esc(why||"нет ответа сервера")+'</small>Не получилось отправить заявку. <a href="'+wa+'" target="_blank" rel="noopener">Отправьте её в WhatsApp</a> — текст уже готов — или позвоните 8 917 004-26-28.';
+   note.innerHTML='Не получилось отправить заявку. <a href="'+wa+'" target="_blank" rel="noopener">Отправьте её в WhatsApp</a> — текст уже готов — или позвоните 8 917 004-26-28.<small style="color:var(--muted);display:block;margin-top:4px">Причина: '+esc(why||"нет ответа сервера")+'</small>';
   });
 });
-
-(function(){var im=document.querySelector(".logo img");if(im)document.documentElement.style.setProperty("--wm","url("+im.src+")")})();
-(function(){var im=document.querySelector(".big-wm img");if(im)document.documentElement.style.setProperty("--wm2","url("+im.src+")")})();
-
-(function(){
- var e=document.getElementById("eqp"),h="",n=17,k,hh;
- for(k=0;k<n;k++){hh=22+Math.round(58*Math.sin(Math.PI*(k+.5)/n));h+='<i style="height:'+hh+'px;animation-delay:-'+(Math.random()*1.5).toFixed(2)+'s;animation-duration:'+(1+Math.random()*.9).toFixed(2)+'s"></i>'}
- e.innerHTML=h;
- var T=[["Звук","Звуковое оборудование"],["Свет","Световое оборудование"],["Сцена","Сценические конструкции"],["Видео","LED-экраны и видео"],["Спецэффекты","Спецэффекты"],["Энергия","Энерго-обеспечение"]];
- var t=document.getElementById("tiles");
- t.innerHTML=T.map(function(x){return '<button class="tile" type="button" data-c="'+x[0]+'"><span class="ic">'+tileIcons[x[0]]+'</span><span>'+x[1]+'</span></button>'}).join("");
- t.addEventListener("click",function(ev){var b=ev.target.closest(".tile");if(b)goCat(b.dataset.c)});
- document.getElementById("facts").innerHTML=
-  '<div><b><span class="cnt" data-to="'+items.length+'">'+items.length+'</span><em>+</em></b><span>позиций в каталоге</span></div>'+
-  '<div><b><span class="cnt" data-to="'+cats.length+'">'+cats.length+'</span></b><span>направлений техники</span></div>'+
-  '<div><b><span class="cnt" data-to="9" data-from="0">9</span><em>–</em><span class="cnt" data-to="21" data-from="0">21</span></b><span>на связи ежедневно</span></div>'+
-  '<div><b><span class="cnt" data-to="1">1</span> <em>час</em></b><span>на расчёт сметы</span></div>';
-})();
-
-/* ===== ДЕМО: конструктор события ===== */
-(function(){
- var F=["Свадьба","Корпоратив","Концерт","Конференция","Выпускной"],fmt="Свадьба",guests=80,kit=[];
- var need={"Звук":1,"Свет":1,"Спецэффекты":0,"Видео":0},hint={"Звук":"акустика, пульт, микрофоны","Свет":"заливка, головы, стойки","Спецэффекты":"дым, фонтаны, конфетти","Видео":"проектор и экран"};
- var fe=document.getElementById("bFmt"),ne=document.getElementById("bNeed"),gs=document.getElementById("bGs");
- fe.innerHTML=F.map(function(f){return '<button class="opt" type="button" data-f="'+f+'" aria-pressed="'+(f===fmt)+'">'+f+'</button>'}).join("");
- function drawNeed(){ne.innerHTML=Object.keys(need).map(function(k){return '<button class="tgl" type="button" data-k="'+k+'" aria-pressed="'+!!need[k]+'"><span>'+k+'<small>'+hint[k]+'</small></span><span class="sw"></span></button>'}).join("")}
- fe.addEventListener("click",function(e){var b=e.target.closest(".opt");if(!b)return;fmt=b.dataset.f;
-  fe.querySelectorAll(".opt").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
-  if(fmt==="Конференция")need["Видео"]=1;if(fmt==="Концерт"||fmt==="Выпускной"){need["Свет"]=1;need["Спецэффекты"]=1}
-  drawNeed();calc()});
- ne.addEventListener("click",function(e){var b=e.target.closest(".tgl");if(!b)return;need[b.dataset.k]=need[b.dataset.k]?0:1;drawNeed();calc()});
- gs.addEventListener("input",function(){guests=+this.value;calc()});
- function calc(){
-  document.getElementById("bGv").textContent=guests+(guests>=300?"+":"");
-  gs.style.setProperty("--p",((guests-20)/280*100)+"%");
-  var k=[],big=guests>150,mid=guests>80;function a(n,c){if(c>0&&idxOf(n)>=0)k.push([n,c])}
-  if(need["Звук"]){a("Активная акустика 15\"",big?4:2);a("Сабвуфер 18\"",big||mid?2:1);a("Микшерный пульт 16 каналов",1);
-   a("Радиомикрофон ручной",fmt==="Конференция"?3:2);if(fmt==="Конференция")a("Радиосистема с гарнитурой",1);
-   if(fmt==="Корпоратив"||fmt==="Выпускной")a("DJ-комплект",1);if(guests>200)a("Линейный массив Meyer Sound",1)}
-  if(need["Свет"]){a("LED PAR, комплект 8 шт.",big?2:1);if(fmt!=="Конференция"){a("Вращающаяся голова Spot",mid?4:2);if(mid)a("Вращающаяся голова Wash",2)}
-   if(fmt==="Концерт"||fmt==="Выпускной")a("Стробоскоп",1);if(mid||fmt==="Концерт")a("Пульт управления светом",1);a("Стойки для света и звука",big?4:2)}
-  if(need["Спецэффекты"]){a(fmt==="Свадьба"?"Тяжёлый дым":"Генератор дыма",1);a("Холодные фонтаны",1);if(fmt!=="Конференция")a("Хлопушка с конфетти",1)}
-  if(need["Видео"]){a("Проектор 5000 лм",1);a("Экран на треноге 3×2 м",1)}
-  kit=k;
-  var sum=0,req=false;k.forEach(function(x){var p=priceNum(items[idxOf(x[0])]);if(p)sum+=p*x[1];else req=true});
-  document.getElementById("bSub").textContent=fmt+" · "+guests+(guests>=300?"+":"")+" гостей · "+k.reduce(function(t,x){return t+x[1]},0)+" ед. техники";
-  document.getElementById("bList").innerHTML=k.length?k.map(function(x,i){var it=items[idxOf(x[0])];return '<li style="animation-delay:'+(i*.03)+'s"><span class="im">'+pic(it)+'</span><span>'+esc(x[0])+'</span><b>× '+x[1]+'</b></li>'}).join("")
-   :'<li style="grid-template-columns:1fr;color:var(--muted)">Включите хотя бы одно направление</li>';
-  document.getElementById("bTot").textContent=sum?"от "+rub(sum)+(req?" +":""):"—";
-  document.getElementById("bAdd").disabled=!k.length;
- }
- document.getElementById("bAdd").onclick=function(){kit.forEach(function(x){addToCart(x[0],x[1])});
-  var m=document.getElementById("msg");if(m&&!m.value)m.value=fmt+", "+guests+" гостей";openCart()};
- drawNeed();calc();
-})();
-
-/* ===== ДЕМО: курсор, свет, подсветка, счётчики ===== */
+paintPicks();
+/* ===== Живые эффекты: курсор, свет, подсветка, счётчики ===== */
 (function(){
  var reduce=window.matchMedia("(prefers-reduced-motion:reduce)").matches;
  var fine=window.matchMedia("(hover:hover) and (pointer:fine)").matches;
 
  /* 3. подсветка карточек (вешаем на нужные блоки, в т.ч. появляющиеся позже) */
- var GSEL=".card,.pack,.tile,.svc,.why>div,.bq,.res,.step";
+ var GSEL=".tile,.dir,.sc,.why>div,.bq,.res,.step";
  function markGlow(root){(root||document).querySelectorAll(GSEL).forEach(function(el){if(!el.classList.contains("glow"))el.classList.add("glow")})}
  markGlow();
  new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(n){if(n.nodeType===1){if(n.matches&&n.matches(GSEL))n.classList.add("glow");markGlow(n)}})})}).observe(document.body,{childList:true,subtree:true});
@@ -1046,6 +966,7 @@ document.getElementById("form").addEventListener("submit",function(e){
   document.querySelectorAll(".cnt").forEach(function(el){el.textContent=fmtN(+(el.dataset.from||0),el);io.observe(el)});
  }
 })();
+
 </script>
 </body>
 </html>
